@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Bootstrap 4 Table with Box and Shadow</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link rel="stylesheet" href="library.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script> 
+<link
+href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+rel="stylesheet"
+/>
+<link rel="icon" type="image/x-icon" href="images/gaytri-removebg-preview.png">
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom hex color for the table header */
+        .custom-header {
+            background-color: #000435; /* Dark blue */
+            color: #ffffff; /* White text */
+        }
+
+        /* Custom color for table rows */
+        .custom-row {
+            background-color: white;
+        }
+
+        /* Border color for table cells */
+        .custom-table th, 
+        .custom-table td {
+            border: 1px solid #000435f1;  
+        }
+
+        /* Box and shadow for the table container */
+        .table-box {
+            padding: 20px;
+            border: 1px solid #000435; /* Dark blue border */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Light shadow effect */
+            background-color: #f9f9f9; /* Light background inside the box */
+            margin-bottom: 30px;
+        }
+
+        /* Style for the h1 element */
+        h1 {
+            text-align: center; /* Center align the heading */
+            margin-top: 20px; /* Add some space above the heading */
+        }
+
+        body {
+            margin: 0; /* Remove default body margin */
+            padding: 0; /* Remove default body padding */
+        }
+
+        .container-fluid {
+            padding: 0; /* Remove container padding */
+        }
+
+        .card-horizontal {
+            display: flex;
+            flex-direction: row; /* Use row for horizontal layout */
+            height: 100%;
+        }
+
+        .card-horizontal img {
+            width: 150px; /* Increased image width */
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .card-content {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: flex-end; /* Align button to the right */
+            padding: 0.5rem; /* Adjust padding as needed */
+        }
+
+        .btn-fixed {
+            width: 70px; /* Fixed width for the button */
+            white-space: nowrap; /* Prevent text from wrapping */
+            text-align: center; /* Center text inside the button */
+        }
+
+        /* Custom styles for the cards */
+        .custom-card {
+          max-width: 350px;/* Set a maximum width for the cards */
+            margin: 0 auto; /* Center the card */
+        }
+
+        /* Decrease font size for card text */
+        .card-text {
+            font-size: 0.8rem; /* Decreased font size for description */
+            margin: 0; /* Remove margin for compactness */
+        }
+    </style>
+</head>
+<body class="d-flex justify-content-center align-items-center flex-column" style="min-height: 100vh;">
+    <div class="nav-container d-flex align-items-center" style="width: 100%;">
+        <div class="nav1 hi text d-flex m-1 h-10 align-top rounded-lg shadow-md shadow-orange-600" style="background-color: #000435; width: 74%;">
+          <h1 class=" nav-item align-text-middle m-2 text-white transitionn transfrom hover:translate-x-2 hover:scale-110 hover:text-o"><a href="training.html" style="text-decoration: none;">TRAINING & PLACEMENT</a></h1>
+          <h1 class=" nav-item  align-text-middle m-2 text-white transitionn transfrom hover:translate-x-2 hover:scale-110"><a href="ExamCell/Examcell.html" style="text-decoration: none;">EXAM CELL</a></h1>
+          <h1 class=" nav-item align-text-middle m-2 text-white transitionn transfrom hover:translate-x-2 hover:scale-110"><a href=""style="text-decoration: none;">GALLERY</a></h1>
+          <h1 class=" nav-item align-text-middle m-2 text-white transitionn transfrom hover:translate-x-2 hover:scale-110"><a href=""style="text-decoration: none;">RESEARCH</a></h1>
+          <h1 class=" nav-item align-text-middle m-2 text-white transitionn transfrom hover:translate-x-2 hover:scale-110"><a href="iqac.html"style="text-decoration: none;">IQAC</a></h1>
+          <h1 class=" nav-item align-text-middle m-2 text-white transitionn transfrom hover:translate-x-2 hover:scale-110"><a href="fac.html"style="text-decoration: none;">Faculty</a></h1>
+          <h1 class=" nav-item align-text-middle m-2 text-white transitionn transfrom hover:translate-x-2 hover:scale-110"><a href="Library/library.html"style="text-decoration: none;">Library</a></h1>
+          <h1 class=" nav-item align-text-middle m-2 text-white transitionn transfrom hover:translate-x-2 hover:scale-110"><a href="#contact-us"style="text-decoration: none;">Contact US</a></h1>
+        </div>
+      
+        <div class="links d-flex ml-3 align-items-center" style="width: 26%;">
+          <img src="images/nacc.png" alt="" class="bg-white h-14">
+          <img src="images/NBA.png" alt="" class="bg-white h-8 mt-1 w-8">
+          <p class="ml-3" style="font-size: 10px;">EAPCET_CODE</p>
+          <p class="text-blue-800 mx-3" style="font-weight: 500;">GVPW</p>
+        </div>
+      </div>
+      
+          
+      </div>
+      </div>
+      <div class="nav-img  d-flex mx-10">
+        <img src="images/gvpcewlogo.jpg" alt="" class=" h-15 w-48 float-left rounded-lg"> 
+         <!-- <h1 > <span  class="text-blue-900 text-xl mt-2" style="font-weight: 800;" >GVPCEW</span> <p class=" text-drak text-m" >Engineering</p></h1> --> 
+        <div class=" d-flex ml-10 mt-2">
+        
+          <div class="btn-group m-2 ">
+            <button class="btn text-blue-900 dropdown-toggle transition transform hover:translate-x-2 hover:scale-110" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+              ADMINISTRATION
+            </button>
+            <ul class="dropdown-menu w-auto  bg-orange-500">
+              <div class="card mb-3 w-96 ">
+                <div class="row g-0">
+                  <!-- <div class="col-md-4">
+                    <img src="..." class="img-fluid rounded-start" alt="...">
+                  </div> -->
+                  <div class="col-md-8">
+                    <div class="card-body ">
+                      <h5 class="card-title"></h5>
+                      <p class="card-text"><ul><li class=""> <i class="ri-organization-chart text-blue-700 text-m"></i> <a href="admi.html">President</a></li> <li> <i class="ri-organization-chart text-blue-700 text-m"></i>Secretary</li><li> <i class="ri-organization-chart text-blue-700 text-m"></i>Former Principals</li><li> <i class="ri-organization-chart text-blue-700 text-m"></i>Principal</li> <li> <i class="ri-organization-chart text-blue-700 text-m"></i>Vice Principal</li> <li> <i class="ri-organization-chart text-blue-700 text-m"></i>Director-R&D</li></ul></p>
+                      <p class="card-text"><small class="text-body-secondary"></small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div class="btn-group m-2 ">
+            <button class="btn text-blue-900 dropdown-toggle transition transform hover:translate-x-2 hover:scale-110 " type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+               DEPARTMENTS
+            </button>
+            <ul class="dropdown-menu w-auto  bg-orange-500">
+              <div class="card mb-3 w-96 ">
+                <div class="row g-0">
+                  
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title"> </h5>
+                      <p class="card-text"><ul><li class="hover:tex-blue"><i class="ri-mac-line text-blue-700 text-m"></i> <a href="Departments/CSE.html">Computer Science and Engineering </a></li>
+                         <li><i class="ri-robot-3-fill text-blue-700 text-m"></i> <a href="Departments/CSM_Dept.html">Computer Science and Machine Learning</a></li>
+                         <li><i class="ri-mac-line text-blue-700 text-m"></i><a href="Departments/ECE.html">Electronics and Communication Engineering</a></li>
+                         <li><i class="ri-mac-line text-blue-700 text-m"></i><a href="Departments/IT.html">Information Technology</a></li>
+                         <li><i class="ri-mac-line text-blue-700 text-m"></i><a href="Departments/ECE.html">Electrical and Electronics Engineering</a></li></ul></p>
+                      <p class="card-text"><small class="text-body-secondary"></small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+          
+          <div class="btn-group m-2 ">
+            <button class="btn text-blue-900 dropdown-toggle transition transform hover:translate-x-2 hover:scale-110 " type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+              FACILITIES
+            </button>
+            <ul class="dropdown-menu w-auto bg-orange-500">
+              <div class="card mb-3 w-80 ">
+                <div class="row g-0">
+                  
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title"></h5>
+                      <p class="card-text">
+                        <ul>
+                            <li><i class="fas fa-chalkboard-teacher" style="color: darkblue;"></i><a href="FACILI.html"> Class Rooms</a></li>
+                            <li><i class="fas fa-flask" style="color: darkblue;"></i><a href="FACILI.html"> Laboratories</a></li>
+                            <li><i class="fas fa-bed" style="color: darkblue;"></i><a href="FACILI.html"> Hostel &Canteen</a></li>
+                            <li><i class="fas fa-laptop" style="color: darkblue;"></i><a href="FACILI.html"> E-classroom</a></li>
+                            <li><i class="fas fa-dumbbell" style="color: darkblue;"></i><a href="FACILI.html"> Gymnasium</a></li>
+                            <li><i class="fas fa-bus" style="color: darkblue;"></i><a href="FACILI.html"> Transportation</a></li>
+                            <li><i class="fas fa-bolt" style="color: darkblue;"></i><a href="FACILI.html"> Electricity & Water</a></li>
+                            <li><i class="fas fa-briefcase-medical" style="color: darkblue;"></i><a href="FACILI.html"> Health Care Unit</a></li>
+                            <li><i class="fas fa-wifi" style="color: darkblue;"></i><a href="FACILI.html"> Internet</a></li>
+                        </ul>
+                    </p>
+                    
+                    
+                  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+          
+          <div class="btn-group m-2 ">
+            <button class="btn text-blue-900 dropdown-toggle transition transform hover:translate-x-2 hover:scale-110  " type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+             Student Parent Login
+            </button>
+            <ul class="dropdown-menu w-auto">
+              <div class="card mb-3 w-96 ">
+                <div class="row g-0">
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <p class="card-text"><ul><li>student/parent login </li> <li>Learning Managment System</li><li>Student Clubs(EEE,CSI,IETE)</li></ul></p>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div class="btn-group m-2 ">
+            <button class="btn text-blue-900 dropdown-toggle transition transform hover:translate-x-2 hover:scale-110 " type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+             OTHER
+            </button>
+            <ul class="dropdown-menu w-auto">
+              <div class="card mb-3 w-96 ">
+                <div class="row g-0">
+                  
+                  <div class="col-md-8">
+                    <div class="card-body">
+                    
+                      <p class="card-text"><ul><li>ALUMINI PORTAL</li> <li>GVPW NSS UNIT</li> <li>Latest Events</li></ul></p>
+                      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+         
+      
+      </div>
+    </div>
+      </nav>
+    <div class="container-fluid mt-4" style="background-color: #000435f1; margin-bottom: 30px;">
+        <h1 style="color: white; font-family: Arial, Helvetica, sans-serif;">Members</h1>
+        <div class="row no-gutters">
+            <div class="col-6 col-md-4 mb-4"> <!-- Changed to col-6 for small screens -->
+                <div class="card card-horizontal shadow custom-card">
+                    <img src="saiprasad.jpg" class="card-img-left" alt="Sample Image"> <!-- Increased image size -->
+                    <div class="card-content">
+                        <h6 class="card-title">Dr.K.L.Sai Prasad M.Sc.,Ph.D</h6>
+                        <p class="card-text">Associate Professor
+                            and Incharge 
+                            <contact>8885043349</contact>
+                           
+                        </p> <!-- Decreased description size -->
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm btn-fixed">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4"> <!-- Changed to col-6 for small screens -->
+                <div class="card card-horizontal shadow custom-card">
+                    <img src="Kameshwarao.jpeg" class="card-img-left" alt="Sample Image">
+                    <div class="card-content">
+                        <h6 class="card-title">Dr. A.Kameswara Rao M.Sc.,Ph.D</h6>
+                        <p class="card-text">Assistant Professor
+                            <contact>9866902309</contact>
+                        </p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm btn-fixed">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4"> <!-- Changed to col-6 for small screens -->
+                <div class="card card-horizontal shadow custom-card">
+                    <img src="PurushottamNaidu.jpg" class="card-img-left" alt="Sample Image">
+                    <div class="card-content">
+                        <h6 class="card-title"> Mr. K. Purushotham Naidu, M.Tech.,(Ph.D)</h6>
+                        <p class="card-text">Assistant Professor</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm btn-fixed">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4"> <!-- Changed to col-6 for small screens -->
+                <div class="card card-horizontal shadow custom-card">
+                    <img src="BLakshmi.jpeg" class="card-img-left" alt="Sample Image">
+                    <div class="card-content">
+                        <h6 class="card-title">Mrs B. Lakshmi M.Tech</h6>
+                        <p class="card-text">Assistant Professor</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm btn-fixed">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4"> <!-- Changed to col-6 for small screens -->
+                <div class="card card-horizontal shadow custom-card">
+                    <img src="ashok.jpg" class="card-img-left" alt="Sample Image">
+                    <div class="card-content">
+                        <h6 class="card-title">Mr.S. Ashok M.Sc</h6>
+                        <p class="card-text">Assistant Professor</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm btn-fixed">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 mb-4"> <!-- Changed to col-6 for small screens -->
+                <div class="card card-horizontal shadow custom-card">
+                    <img src="https://via.placeholder.com/100" class="card-img-left" alt="Sample Image">
+                    <div class="card-content">
+                        <h6 class="card-title">Mrs. Lalitha Parameswari</h6>
+                        <p class="card-text">Brief desc.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-primary btn-sm btn-fixed">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container table-box">
+        <h2 class="text-center mb-4">Exam Details</h2>
+        <table class="table table-bordered text-center custom-table">
+            <thead class="custom-header">
+                <tr>
+                    <th>SI.NO</th>
+                    <th>Release Date</th>
+                    <th>Result Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="custom-row">
+                    <td>1</td>
+                    <td>2024-01-15</td>
+                    <td>
+                        3-2 (R20-R19-R16) Supply Exam Results_Dec-2023
+                        
+                        </td>
+                    <td>
+                        <a href="3-2 (R20-R19-R16) Supply Exam Results_Dec-2023.pdf" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td>2</td>
+                    <td>2024-02-10</td>
+                    <td>3-1 (R16-R19-R20) Regular and Supply Exam Results_Dec 2023</td>
+                    <td>
+                        <a href="3-1 (R16-R19-R20) Regular and Supply Exam Results_Dec 2023.pdf" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td>3</td>
+                    <td>2024-03-05</td>
+                    <td>2-1_2-2 and 3-2 Supply External Lab Exam Time tables_December 2023 Exams
+
+                    </td>
+                    <td>
+                        <a href="2-1_2-2 and 3-2 Supply External Lab Exam Time tables_December 2023 Exams.pdf" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td>4</td>
+                    <td>2024-04-22</td>
+                    <td>3-1 Regular and Supply External Lab Exam Time tables_December 2023 Exams</td>
+                    <td>
+                        <a href="3-1 Regular and Supply External Lab Exam Time tables_December 2023 Exams.pdf" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td>5</td>
+                    <td>2024-05-30</td>
+                    <td>2-1 (R20-R19-R16) SUPPLY THEORY EXAMS TIME TABLE_DEC 2023 EXAMS</td>
+                    <td>
+                        <a href="2-1 (R20-R19-R16) SUPPLY THEORY EXAMS TIME TABLE_DEC 2023 EXAMS.pdf" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td>6</td>
+                    <td>2024-05-30</td>
+                    <td>2-2 (R20-R19-R16) SUPPLY THEORY EXAMS TIME TABLE_DEC 2023 EXAMS</td>
+                    <td>
+                        <a href="2-2 (R20-R19-R16) SUPPLY THEORY EXAMS TIME TABLE_DEC 2023 EXAMS.pdf" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td>7</td>
+                    <td>2024-05-30</td>
+                    <td>3-1 (R20-R19-R16) REGULAR & SUPPLY THEORY EXAMS TIME TABLE_DEC 2023 EXAMS</td>
+                    <td>
+                        <a href="3-1 (R16-R19-R20) Regular and Supply Exam Results_Dec 2023.pdf" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td>8</td>
+                    <td>2024-05-30</td>
+                    <td>3-2 (R20-R19-R16) SUPPLY THEORY EXAMS TIME TABLE_DEC 2023 EXAMS</td>
+                    <td>
+                        <a href="3-2 (R20-R19-R16) SUPPLY THEORY EXAMS TIME TABLE_DEC 2023 EXAMS.pdf" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td>9</td>
+                    <td>2024-05-30</td>
+                    <td>Result of III B.Tech II Semester (R13) Supplementary Examinations, July-2023</td>
+                    <td>
+                        <a href="Result of III B.Tech II Semester (R13) Supplementary Examinations, July-2023.pdf" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td>10</td>
+                    <td>2024-05-30</td>
+                    <td>Result of III B.Tech II Semester (R16) Supplementary Examinations, July-2023</td>
+                    <td>
+                        <a href="Result of III B.Tech II Semester (R16) Supplementary Examinations, July-2023.pdf" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td>11</td>
+                    <td>2024-05-30</td>
+                    <td>I YEAR B TECH II SEM END EXAM TIME TABLE - AU (2022 BATCH)</td>
+                    <td>
+                        <a href="2-1 (R20-R19-R16) SUPPLY THEORY EXAMS TIME TABLE_DEC 2023 EXAMS" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td>12</td>
+                    <td>2024-05-30</td>
+                    <td>I YEAR B TECH II SEMESTER (2022 ADMITTED BATCH) MID-II EXAM TIME TABLE AUGUST 2023
+
+                    </td>
+                    <td>
+                        <a href="I YEAR B TECH II SEMESTER (2022 ADMITTED BATCH) MID-II EXAM TIME TABLE AUGUST 2023.pdf" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td>13</td>
+                    <td>2024-05-30</td>
+                    <td>3-2 (R20) External lab exam Timetables_All Branches_24062023</td>
+                    <td>
+                        <a href="3-2 (R20) External lab exam Timetables_All Branches_24062023.pdf" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr>  <tr class="custom-row">
+                    <td>14</td>
+                    <td>2024-05-30</td>
+                    <td>2-2 (R20) External lab exam Timetables_All Branches_24062023
+
+                    </td>
+                    <td>
+                        <a href="2-2 (R20) External lab exam Timetables_All Branches_24062023.pdf" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr>  <tr class="custom-row">
+                    <td>15</td>
+                    <td>2024-05-30</td>
+                    <td>3-2_3-1_2-1_1-2 Supply External lab exam Timetables_All Branches_24062023</td>
+                    <td>
+                        <a href="3-2_3-1_2-1_1-2 Supply External lab exam Timetables_All Branches_24062023.pdf" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr>  <tr class="custom-row">
+                    <td>16</td>
+                    <td>2024-05-30</td>
+                    <td>I B TECH II SEMESTER (2022 ADMITTED BATCH) MID-I EXAM TIME TABLE</td>
+                    <td>
+                        <a href="I B TECH II SEMESTER (2022 ADMITTED BATCH) MID-I EXAM TIME TABLE.pdf" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr>  <tr class="custom-row">
+                    <td>17</td>
+                    <td>2024-05-30</td>
+                    <td>3-2 (R20-R19-R16-R13) Regular & Supply theory Exam TT_July 2023 Exams
+
+                    </td>
+                    <td>
+                        <a href="3-2 (R20-R19-R16-R13) Regular & Supply theory Exam TT_July 2023 Exams.pdf" target="new" class="btn btn-primary" download>Show</a>
+                    </td>
+                </tr> 
+
+            </tbody>
+        </table>
+    </div>
+    <div class="container table-box">
+        <div class="table table-bordered text-center custom-table">
+            <h2 class="text-center mb-4">Exam Applications</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Exam Name</th>
+                        <th>Links</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>4-2 Sup (R13 & R10) Exam Application Form_JUNE 2021</td>
+                        <td><a href="4-2 Sup (R13 & R10) Exam Application Form_JUNE 2021.pdf" target="new" class="btn btn-primary" download>Download PDF</a></td>
+                    </tr>
+                    <tr>
+                        <td>4-1 Adv Supply (R13 & R10) Application Form_June 2021</td>
+                        <td><a href="4-1 Adv Supply (R13 & R10) Application Form_June 2021.pdf" target="new" class="btn btn-primary" download>Download PDF</a></td>
+                    </tr>
+                    <tr>
+                        <td>3-2 Sup (R13 & R10) Exam Application Form_June 2021</td>
+                        <td><a href="3-2 Sup (R13 & R10) Exam Application Form_June 2021.pdf" target="new" class="btn btn-primary" download>Download PDF</a></td>
+                    </tr>
+                    <tr>
+                        <td>3-1 Sup (R13 & R10) Exam Application Form_June 2021</td>
+                        <td><a href="3-1 Sup (R13 & R10) Exam Application Form_June 2021.pdf" target="new" class="btn btn-primary" download>Download PDF</a></td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div id="contact-us" class="footer mt-20">
+            <footer class="text-white pt-5 pb-4" style="background-color: #000435;">
+                <div class="container text-center text-md-left">
+                    
+                    <!-- Row for Contact Information and YouTube Video -->
+                    <div class="row align-items-center">
+                        
+                        <!-- Contact Information -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="contact-info" style="line-height: 1.8; font-size: 0.9rem; color: white;">
+                                <p style="margin-bottom: 8px;">
+                                    Madhurawada, Visakhapatnam-530048, AP, India.
+                                </p>
+                                <p style="margin-bottom: 8px;">
+                                    <i class="fas fa-phone-alt" style="color: #ff6600; width: 20px;"></i> 
+                                    Telephone: +91-891-2739144 / 2719124 / 2719125 / 2719127
+                                </p>
+                                <p style="margin-bottom: 8px;">
+                                    <i class="fas fa-fax" style="color: #ff6600; width: 20px;"></i> 
+                                    Fax: +91-891-2526639
+                                </p>
+                                <p>
+                                    <i class="fas fa-envelope" style="color: #ff6600; width: 20px;"></i> 
+                                    Email: 
+                                    <a href="mailto:gvpcew@gmail.com" class="text-white" style="text-decoration:none; color: white;">gvpcew@gmail.com</a>, 
+                                    <a href="mailto:info@gvpcew.ac.in" class="text-white" style="text-decoration:none; color: white;">info@gvpcew.ac.in</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- YouTube Video -->
+                        <div class="col-md-6 col-lg-4 text-center">
+                            <iframe width="650" height="200" src="https://www.youtube.com/embed/R5CWNcekXj4?si=Z7UR6tBuuFSh8hpC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Quick Links Section -->
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <p class="text-uppercase mb-4 font-weight-bold" style="font-size: 1rem; color: #ff6600;">Quick Links</p>
+                            <div class="d-flex flex-wrap justify-content-start" style="line-height: 1.8;">
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Admissions</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Code of Conduct</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Students Hand Book</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Service Rules</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Gate Resources</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Mandatory Disclosure</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">NBA Accreditation Status</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Governing Body</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">NAAC Accreditation Status</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Mandatory Committees</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Statutory Declaration</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Overall Placements</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Anti Ragging</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">IEEE Student Chapter</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Faculty Publications</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">College Brochure</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">College Magazines</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Grievance Redressal</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">AICTE Feedback</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Virtual Tour to GVPW</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Institution's Innovation Council</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Toppers List</a></p>
+                                <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">NIRF</a></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Social Media Icons -->
+                    <div class="text-center mt-4">
+                        <a href="#" style="color: #ff6600; margin: 0 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" style="color: #ff6600; margin: 0 10px;"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" style="color: #ff6600; margin: 0 10px;"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a href="#" style="color: #ff6600; margin: 0 10px;"><i class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+        
+                </div>
+            </footer>
+        </div>
+        
+</div>
+</body>
+</html>

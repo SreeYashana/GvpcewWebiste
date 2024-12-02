@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background:white;
+}
+
+header {
+    text-align: center;
+    padding:20px;
+    background-color:navy;
+    color:white;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.facility {
+    background-color:navy;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin: 10px;
+    width: calc(30% - 40px);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none; /* Prevent underline */
+    color:navy;
+    transition: transform 0.3s, box-shadow 0.3s;
+    perspective: 1000px; /* Text color */
+}
+
+.facility:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(239, 54, 54, 0.3);
+}
+
+.facility.active {
+    border: 2px solid orange; /* Highlight border */
+    background-color: #e8f5e9; /* Light background for active */
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.images img {
+    width: 28%;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.facility-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow:  0 4px 20px rgba(216, 17, 17, 0.2);
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .facility {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .images img {
+        width: 40%;
+    }
+
+    .facility-section {
+        width: 90%;
+        border-bottom:5px solid navy;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+    }
+}
+
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}

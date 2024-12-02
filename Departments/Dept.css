@@ -1,0 +1,176 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+  .overlay-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    background-color:#000435f1;
+    padding: 10PX 10PX;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+  }
+  /* Ensure the container is relative so the text positions correctly */
+  .dept_img {
+    position: relative;
+
+  }
+.heading{
+color:rgba(0, 4, 53, 0.945);
+}
+.heading p{
+  font-size: 0.5rem;
+}
+ .About_Dept h3{
+font-size:2rem;
+background-color:#EEE;
+padding: 10px;
+margin-top: 30PX;
+} 
+.visionBlocks{
+flex-wrap: wrap;
+margin: 20PX;
+}
+.flex{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+.visionAndMission{
+margin: 30px;
+padding:2.5rem;
+border-radius: 15px;
+width: 30rem;
+height:15rem; 
+background: linear-gradient(45deg, rgb(0, 0, 139), rgb(0, 0, 139));
+box-shadow: 12px 12px 24px #000000;
+}
+.visionAndMission h2{ 
+text-align: center;
+font-size:2.5rem;
+color:white;
+font-weight:bolder;
+}
+.visionAndMission p {
+text-align: justify;
+font-size: 0.8rem;
+color:white;
+}
+.peo_img{
+margin-left:100px;
+}
+.container li,.ProgramSpecificOutcomes li {
+border-radius: 15px;
+border: 3px solid #000435f1;
+background-color: white;
+padding: 10px;
+font-family: Sans-serif;
+margin: 5px;
+color: #000435f1 !important;
+}
+.dept_info {
+  margin-bottom: 50px; /* Adds space below the Department Info section */
+}
+
+.dept_info .nav-pills .nav-link {  
+border:solid;
+border-color: #000435f1;
+color: #fff; /* Change text color */
+background-color:#000435f1; /* Change background color */
+}
+.dept_info .nav-link.active {
+background-color:white !important;
+color:#000435f1 !important; /* Change active tab background color */
+}
+
+.card-header {
+background-color: #000435f1; /* Change card header background color */
+color: #fff; /* Change card header text color */
+}
+.card{
+  border: solid #000435f1   !important;
+  } 
+.card-body {
+height:250px; /* Adjust height as needed */
+overflow-y: scroll;
+scrollbar-width: none; /* For Firefox */
+}
+.card-body::-webkit-scrollbar {
+display: none; /* For Chrome, Safari, and Opera */
+}
+.btn-primary{
+background-color: #000435f1;
+border-color: #000435f1! important; /* Change button border color */
+}
+.btn-primary:hover {
+background-color: blue ! important; /* Change button hover background color */
+border-color: blue ! important; /* Change button hover border color */
+}
+
+.Dept_details{
+margin:100px;
+} 
+.Magazinesvolumes {
+  display: flex;
+  flex-wrap: wrap; /* Allows boxes to wrap to the next row */
+  gap: 10px; /* Space between boxes */
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Box styling */
+.box {
+  flex: 1 1 200px; /* Boxes grow and shrink, with a minimum width of 200px */
+  max-width: 300px; /* Set a maximum width */
+  padding: 20px;
+  border: 2px solid #000435f1;
+  text-align: center;
+  border-radius: 5px;
+  transition: transform 0.3s;
+  background-color: #f8f9fa;
+}
+
+/* Hover effect */
+.box:hover {
+  transform: scale(1.05);
+  background-color: #e9ecef;
+}
+
+/* Link styling */
+.box a {
+  text-decoration: none;
+  color: #000435f1;
+  font-weight: bold;
+}
+
+.tab-content {
+  width:100%; /* Adjust as needed */
+  max-width: 700px; /* Set a max-width */
+  max-height:300px; /* Optional: Set a max height if needed */
+  margin: 0 auto; /* Center the tab-content */
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    justify-content: space-between;
+}
+}
+ /* Small screens (phones) */
+ @media (max-width: 480px) {
+  .card-body h3{
+    font-size: 0.8rem;
+  }
+  .overlay-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    background-color:#000435f1;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 0.5rem;
+  }
+}

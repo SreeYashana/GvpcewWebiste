@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Events</title>
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="footer.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+
+
+
+
+
+
+
+
+
+<body  style="margin: 20px;" >
+  <div class="heading">
+    <h1>Our Latest Events</h1>
+  </div>
+
+  <!-- Events Cards Section -->
+  <div class="events-container">
+    <div class="event-row">
+      <div class="event-card" onclick="scrollToEvent('event1')"       style="background-image: url('https://www.gvpcew.ac.in/img/gallery/Internal%20hackthon-2.jpg');">
+       
+        <h3>Hackathons</h3>
+        <button class="view-more-btn">View More</button>
+      </div>
+      <div class="event-card" onclick="scrollToEvent('event2')"       style="background-image: url('gdg.jpg');"  >
+        
+        <h3>Technical Clubs</h3>
+        <button class="view-more-btn">View More</button>
+      </div>
+      <div class="event-card" onclick="scrollToEvent('event3')"        style="background-image: url('https://www.gvpcew.ac.in/img/gallery/22.jpg');"       >
+        
+        <h3>Science day</h3>
+        <button class="view-more-btn">View More</button>
+      </div>
+      <div class="event-card" onclick="scrollToEvent('event4')"        style="background-image: url('https://www.gvpcew.ac.in/img/gallery/Republic-2.jpg');"     >
+       
+        <h3>Republic day</h3>
+        <button class="view-more-btn">View More</button>
+      </div>
+    </div>
+    <div class="event-row">
+      <div class="event-card" onclick="scrollToEvent('event5')"             style="background-image: url('https://www.gvpcew.ac.in/img/gallery/2.jpg');"      >
+       
+        <h3>Women's day</h3>
+        <button class="view-more-btn">View More</button>
+      </div>
+      <div class="event-card" onclick="scrollToEvent('event6')"              style="background-image: url('independenceday.JPG');"     >
+       
+        <h3>Independence day</h3>
+        <button class="view-more-btn">View More</button>
+      </div>
+      <div class="event-card" onclick="scrollToEvent('event7')"            style="background-image: url('https://www.gvpcew.ac.in/img/gallery/NSS-ChampoionShip/2.jpg');"       >
+
+        <h3>NSS</h3>
+        <button class="view-more-btn">View More</button>
+      </div>
+      <div class="event-card" onclick="scrollToEvent('event8')"                    style="background-image: url('other events.jpg');" >
+
+        <h3>Others</h3>
+        <button class="view-more-btn">View More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Event Details Sections -->
+  <div class="event-details">
+    <div id="event1" class="event-detail">
+      <h2>Internal Hackathons</h2>
+      <div class="event-images">
+        <img src="https://www.gvpcew.ac.in/img/gallery/Internal%20hackthon-1.jpg" alt="Tech Fest Image 1"        >
+        <img src="https://www.gvpcew.ac.in/img/gallery/Internal%20hackthon-2.jpg" alt="Tech Fest Image 2"        >
+        <img src="https://www.gvpcew.ac.in/img/gallery/Internal%20hackthon-3.jpg" alt="Tech Fest Image 3"        >
+       
+      </div>
+    </div>
+
+    <div id="event2" class="event-detail">
+      <h2>Technical clubs</h2>
+      <div class="event-images">
+        <img src="https://www.gvpcew.ac.in/img/gallery/Picsl-Coscengers-1.jpeg" alt="Cultural Fest Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/Picsl-Coscengers-2.jpeg" alt="Cultural Fest Image 2">
+        <img src="https://www.gvpcew.ac.in/img/gallery/Picsl-Coscengers-4.jpeg" alt="Cultural Fest Image 3">
+        <img src="https://www.gvpcew.ac.in/img/gallery/Picsl-Coscengers-5.jpeg" alt="Cultural Fest Image 4">
+        <img src="https://www.gvpcew.ac.in/img/gallery/Picsl-Coscengers-6.jpeg" alt="Cultural Fest Image 4">
+       
+      </div>
+    </div>
+
+    <div id="event3" class="event-detail">
+      <h2>Science day</h2>
+      <div class="event-images">
+        <img src="https://www.gvpcew.ac.in/img/gallery/National%20science%20day-1.jpg" alt="Sports Meet Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/National%20science%20day-2.jpg" alt="Sports Meet Image 2">
+        <img src="https://www.gvpcew.ac.in/img/gallery/National%20science%20day-3.jpg" alt="Sports Meet Image 3">
+        <img src="https://www.gvpcew.ac.in/img/gallery/22.jpg" alt="Sports Meet Image 3">
+        <img src="https://www.gvpcew.ac.in/img/gallery/23.jpg" alt="Sports Meet Image 3">
+        <img src="https://www.gvpcew.ac.in/img/gallery/24.jpg" alt="Sports Meet Image 3">
+        
+      </div>
+    </div>
+
+    <div id="event4" class="event-detail">
+      <h2>Republic day</h2>
+      <div class="event-images">
+        <img src="https://www.gvpcew.ac.in/img/gallery/Republic-1.jpg" alt="Art Exhibition Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/Republic-2.jpg" alt="Art Exhibition Image 2">
+        <img src="https://www.gvpcew.ac.in/img/gallery/Republic-3.jpg" alt="Art Exhibition Image 3">
+        <img src="https://www.gvpcew.ac.in/img/gallery/26Jan2020/7.jpg" alt="Art Exhibition Image 4">
+        <img src="https://www.gvpcew.ac.in/img/gallery/26Jan2020/6.jpg" alt="Art Exhibition Image 4">
+        <img src="https://www.gvpcew.ac.in/img/gallery/26Jan2020/9.jpg" alt="Art Exhibition Image 4">
+      </div>
+    </div>
+
+    <div id="event5" class="event-detail">
+      <h2>Women's day</h2>
+      <div class="event-images">
+        <img src="https://www.gvpcew.ac.in/img/gallery/2.jpg" alt="Robotics Workshop Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/4.jpg" alt="Robotics Workshop Image 2">
+        <img src="https://www.gvpcew.ac.in/img/gallery/6.jpg" alt="Robotics Workshop Image 3">
+        <img src="https://www.gvpcew.ac.in/img/gallery/5.jpg" alt="Robotics Workshop Image 4">
+      </div>
+    </div>
+
+    <div id="event6" class="event-detail">
+      <h2>Independence day</h2>
+      <div class="event-images">
+        <img src="https://www.gvpcew.ac.in/img/gallery/Aug2021-1.jpg" alt="Science Fair Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/Aug2021-2.jpg" alt="Science Fair Image 2">
+        <img src="https://www.gvpcew.ac.in/img/gallery/Aug2021-3.jpg" alt="Science Fair Image 3">
+        
+      </div>
+    </div>
+
+    <div id="event7" class="event-detail">
+      <h2>NSS</h2>
+      <div class="event-images">
+        <img src="https://www.gvpcew.ac.in/img/gallery/NSS-ChampoionShip/2.jpg" alt="Dance Competition Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/NSS-ChampoionShip/1.jpg" alt="Dance Competition Image 2">
+        <img src="https://www.gvpcew.ac.in/img/gallery/NSS-ChampoionShip/3.jpg" alt="Dance Competition Image 3">
+       
+      </div>
+    </div>
+
+    <div id="event8" class="event-detail">
+      <h3>Other events</h3>
+      <div class="event-images">
+       <div  class="facilitation">
+         <h4>Felicitation by APSCHE for getting the "A" Grade in NAAC</h4>
+        </div>
+        <div class="a1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/Felicitation_NAAC-1.jpeg" alt="Music Fest Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/Felicitation_NAAC-2.jpg" alt="Music Fest Image 2">
+        <img src="https://www.gvpcew.ac.in/img/gallery/Felicitation_NAAC-3.jpg" alt="Music Fest Image 3">
+        </div>
+        <h4>Guest Lecture - Dr. Srinivas Kota, Sr. Research Scientist, Univ. of Texas South-Western Medical Centre, Dallas, USA</h4>
+        <div class="a2">
+        <img src="https://www.gvpcew.ac.in/img/gallery/24Feb2020-ECE/2.jpg" alt="Music Fest Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/24Feb2020-ECE/1.jpg" alt="Music Fest Image 2">
+        <img src="https://www.gvpcew.ac.in/img/gallery/24Feb2020-ECE/3.jpg" alt="Music Fest Image 3">
+        </div>
+        <h4>Guest Lecture by Prof RogerMarshall - Organized by MathematicsClub on 15 Feb 2020</h4>
+        <div  class="a3">
+        <img src="https://www.gvpcew.ac.in/img/gallery/MathsClub-15Feb2020/2.jpg" alt="Music Fest Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/MathsClub-15Feb2020/1.jpg" alt="Music Fest Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/MathsClub-15Feb2020/3.jpg" alt="Music Fest Image 1">
+        </div>
+        <h4>Address by Sri Srinivas Vanapalli, Faculty of Science & Technology at Univ. of Twente, Netherlands on 18th Dec 2019</h4>
+        <div    class="a4">
+        <img src="https://www.gvpcew.ac.in/img/gallery/18Dec2019/2.jpg" alt="Music Fest Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/18Dec2019/1.jpg" alt="Music Fest Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/18Dec2019/3.jpg" alt="Music Fest Image 1">
+        </div>
+
+        <h4>Guest Lecture by Sri DVA Raghava Murthy, Director, Aerospace Research, Veltech UNIV(Former Project Director - ISRO Head Quarters B'lore)</h4>
+        <div    class="a5">
+        <img src="https://www.gvpcew.ac.in/img/gallery/DVA-Raghava-Murthy/2.jpg" alt="Music Fest Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/DVA-Raghava-Murthy/1.jpg" alt="Music Fest Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/DVA-Raghava-Murthy/3.jpg" alt="Music Fest Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/DVA-Raghava-Murthy/4.jpg" alt="Music Fest Image 1">
+        </div>
+        <h4>Alumni Meet @ Hyderabad on 30th Nov 2019</h4>
+        <div  class="a5">
+        <img src="https://www.gvpcew.ac.in/img/gallery/AlumniMeet-Hyd/1.jpg" alt="Music Fest Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/AlumniMeet-Hyd/3.jpg" alt="Music Fest Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/AlumniMeet-Hyd/4.jpg" alt="Music Fest Image 1">
+        <img src="https://www.gvpcew.ac.in/img/gallery/AlumniMeet-Hyd/2.jpg" alt="Music Fest Image 1">
+        </div>
+    
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for showing full-size image -->
+<div id="imageModal" class="modal">
+  <span id="closeModal" class="close">&times;</span>
+  <img id="modalImage" class="modal-content" src="">
+  <div id="caption"></div>
+</div>
+
+
+
+  <script src="gallery1.js"></script>
+
+
+
+
+
+
+
+
+
+<div id="contact-us" class="footer mt-20">
+    <footer class="text-white pt-5 pb-4" style="background-color: #000435;">
+        <div class="container text-center text-md-left">
+            
+            <!-- Row for Contact Information and YouTube Video -->
+            <div class="row align-items-center">
+                
+                <!-- Contact Information -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="contact-info" style="line-height: 1.8; font-size: 0.9rem; color: white;">
+                        <p style="margin-bottom: 8px;">
+                            Madhurawada, Visakhapatnam-530048, AP, India.
+                        </p>
+                        <p style="margin-bottom: 8px;">
+                            <i class="fas fa-phone-alt" style="color: #ff6600; width: 20px;"></i> 
+                            Telephone: +91-891-2739144 / 2719124 / 2719125 / 2719127
+                        </p>
+                        <p style="margin-bottom: 8px;">
+                            <i class="fas fa-fax" style="color: #ff6600; width: 20px;"></i> 
+                            Fax: +91-891-2526639
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope" style="color: #ff6600; width: 20px;"></i> 
+                            Email: 
+                            <a href="mailto:gvpcew@gmail.com" class="text-white" style="text-decoration:none; color: white;">gvpcew@gmail.com</a>, 
+                            <a href="mailto:info@gvpcew.ac.in" class="text-white" style="text-decoration:none; color: white;">info@gvpcew.ac.in</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- YouTube Video -->
+                <div class="col-md-6 col-lg-4 text-center">
+                    <iframe width="650" height="200" src="https://www.youtube.com/embed/R5CWNcekXj4?si=Z7UR6tBuuFSh8hpC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+            </div>
+            
+            <!-- Quick Links Section -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <p class="text-uppercase mb-4 font-weight-bold" style="font-size: 1rem; color: #ff6600;">Quick Links</p>
+                    <div class="d-flex flex-wrap justify-content-start" style="line-height: 1.8;">
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Admissions</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Code of Conduct</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Students Hand Book</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Service Rules</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Gate Resources</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Mandatory Disclosure</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">NBA Accreditation Status</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Governing Body</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">NAAC Accreditation Status</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Mandatory Committees</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Statutory Declaration</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Overall Placements</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Anti Ragging</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">IEEE Student Chapter</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Faculty Publications</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">College Brochure</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">College Magazines</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Grievance Redressal</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">AICTE Feedback</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Virtual Tour to GVPW</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Institution's Innovation Council</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">Toppers List</a></p>
+                        <p style="width: 25%;"><i class="fas fa-link" style="color: #ff6600; width: 20px;"></i> <a href="#" class="text-white link-hover" style="text-decoration:none; color: white;">NIRF</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="text-center mt-4">
+                <a href="#" style="color: #ff6600; margin: 0 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#" style="color: #ff6600; margin: 0 10px;"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#" style="color: #ff6600; margin: 0 10px;"><i class="fab fa-youtube fa-2x"></i></a>
+                <a href="#" style="color: #ff6600; margin: 0 10px;"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>

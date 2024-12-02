@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- divinectorweb.com -->
+<head>
+    <meta charset="UTF-8"> 
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide header on scroll down show on scroll up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="training.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script> 
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="icon" type="image/x-icon" href="images/gaytri-removebg-preview.png">
+    <link rel="stylesheet" href="st.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+      /* Container styling */
+      .placement-container {
+          background-color: #ffffff;
+          color: #000435;
+          max-width: 1200px;
+          margin: 20px auto;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          font-family: Arial, sans-serif;
+      }
+  
+      /* Header styling */
+      .placement-header h1 {
+          color: orange;
+          font-size: 24px;
+          text-align: center;
+          margin-bottom: 10px;
+          font-weight: bold;
+          animation: fadeIn 2s ease-in-out;
+      }
+  
+      .batch-title {
+          font-size: 28px;
+          color: #000435;
+          text-align: center;
+          text-transform: uppercase;
+          font-weight: bold;
+          margin: 20px 0;
+          position: relative;
+          display: inline-block;
+          animation: slideIn 1.5s ease-in-out;
+      }
+  
+      /* Underline effect with animation */
+      .batch-title::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 50%;
+          width: 0;
+          height: 3px;
+          background-color: orange;
+          transition: width 0.4s ease;
+          transform: translateX(-50%);
+      }
+  
+      .batch-title:hover::after {
+          width: 100%;
+      }
+  
+      /* Content layout */
+      .placement-content {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          align-items: center;
+      }
+  
+      /* Table styling */
+      .placement-table table {
+          width: 100%;
+          border-collapse: collapse;
+          text-align: center;
+      }
+  
+      .placement-table th, .placement-table td {
+          padding: 8px;
+          border: 1px solid #ddd;
+      }
+  
+      .placement-table th {
+          background-color: #000435;
+          color: #ffffff;
+      }
+  
+      .placement-table tbody tr:hover {
+          background-color: #f0f0f0;
+      }
+  
+      .placement-table tfoot td {
+          font-weight: bold;
+      }
+  
+      /* Footer styling */
+      .congrats {
+          color: orange;
+          font-size: 30px;
+          text-align: center;
+          margin-top: 20px;
+          font-weight: bold;
+          animation: fadeIn 1.5s ease-in-out;
+          position: relative;
+          display: inline-block;
+      }
+  
+      /* Floating effect */
+      .congrats:hover {
+          animation: float 1.5s ease-in-out infinite;
+          color: #000435;
+      }
+  
+      /* Animations */
+      @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+      }
+  
+      @keyframes slideIn {
+          from { transform: translateY(-20px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+      }
+  
+      @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-5px); }
+      }
+  
+      /* Responsive styling */
+      @media (max-width: 768px) {
+          .placement-content {
+              flex-direction: column;
+              gap: 20px;
+          }
+          
+          .placement-table table {
+              font-size: 12px;
+          }
+          
+          .placement-header h1, .congrats {
+              font-size: 20px;
+          }
+      }
+    </style>
+    
+</head>
+<body>
+
+  
+    <div class="mainbody">
+    
+        <nav id="navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <img src="images/gvpcewlogo.jpg" alt="Logo">
+                </div>
+                <ul class="nav-items">
+                    <li><a href="images/rec.pdf">Recruiters</a></li>
+                    <li><a href="images/2017-2021 - Training Programs.pdf">Training and Programs</a></li>
+                    <li class="dropdown">
+                        <a href="#">Placements record</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">2019-23</a></li>
+                            <li><a href="#">2018-22</a></li>
+                            <li><a href="#">2017-21</a></li>
+                            <li><a href="#">2016-20</a></li>
+                            <li><a href="#">2015-10</a></li>
+                            <li><a href="#">2014-18</a></li>
+                            <li><a href="#">2013-17</a></li>
+                            <li><a href="#">2012-16</a></li>
+                            <li><a href="#">2011-15</a></li>
+                            <li><a href="#">2010-14</a></li>
+                            <li><a href="#">2009-13</a></li>
+                            <li><a href="#">2008-12</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Placement gallery</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        
+    <div class="banner">
+      <div class="placement-container">
+        <div class="placement-header">
+            <h1>#331 Placement Offers* #196 Students Placed</h1>
+            <h2>2019 - 23 Batch Placements</h2>
+        </div>
+        
+        <div class="placement-content">
+          <div class="placement-table">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Company</th>
+                          <th>CSE</th>
+                          <th>IT</th>
+                          <th>ECE</th>
+                          <th>EEE</th>
+                          <th>Total Offers</th>
+                          <th>Salary</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <!-- Example Rows (Add additional rows as needed) -->
+                      <tr>
+                          <td>Amazon - AWS CSA</td>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>-</td>
+                          <td>1</td>
+                          <td>3</td>
+                          <td>₹ 21,83,400.00</td>
+                      </tr>
+                      <tr>
+                          <td>Capgemini - Analyst</td>
+                          <td>39</td>
+                          <td>15</td>
+                          <td>24</td>
+                          <td>11</td>
+                          <td>89</td>
+                          <td>₹ 4,25,000.00</td>
+                      </tr>
+                      <!-- Add other rows similarly -->
+                  </tbody>
+                  <tfoot>
+                      <tr>
+                          <td>Total Offers</td>
+                          <td>169</td>
+                          <td>63</td>
+                          <td>75</td>
+                          <td>24</td>
+                          <td>331</td>
+                          <td></td>
+                      </tr>
+                  </tfoot>
+              </table>
+          </div>
+      </div>
+      
+      <div class="placement-footer">
+          <h1 class="congrats">Congratulations!</h1>
+      </div>
+  </div>
+
+      
+    <div id="content">
+    <div class="section-header">
+        <h2>Placement Team</h2>
+        
+    </div>
+    <div class="container">
+        <div class="box">
+            <span></span>
+            <div class="icons">
+               <div class="i"><img src="" alt="" width="100px" height="100px" style="align-items: center; border-radius: 20px; padding-right: 40px;"></div>
+            </div>
+            <h3>Mr. Sumahasan Singupuram</h3>
+            <p>Asssistant Professor, Department of CSE
+                </p>
+                 <i class="ri-contacts-book-3-fill" style="color: rgb(254, 253, 253);"> Contact: 9849515720</i>
+        </div>
+        <div class="box">
+            <span></span>
+            <div class="icons">
+                <div class="i"><img src="images/chaithan.jpg.crdownload" alt="" width="100px" height="100px" style="align-items: center; border-radius: 20px; padding-right: 40px;"></div>
+            </div>
+            <h3>Mr. V Krishna Chaitanya P</h3>
+            <p>Asssistant Professor, Department of ECE,
+                Asssistant Training & Placement Officer</p>
+                <i class="ri-contacts-book-3-fill" style="color: rgb(254, 253, 253);">Contact: 9948722220</i> <br>
+                <i class="ri-mail-ai-fill" style="color: rgb(254, 253, 253);">E-mail: tpo@gvpcew.ac.in</i>
+        </div>
+        <div class="box">
+            <span></span>
+            <div class="icons">
+                <i class="fa fa-balance-scale"></i>
+            </div>
+            <h3>Dr.C.Srinivas</h3>
+            <p>Associate Profesor, Dept of IT ,
+                Training & Placement Officer
+                <i class="ri-contacts-book-3-fill" style="color: rgb(254, 253, 253);"> Contact: 8885043345</i></p>
+        </div>
+        <div class="box">
+            <span></span>
+            <div class="icons">
+                <i class="fa fa-balance-scale"></i>
+            </div>
+            <h3>Prof.P.Venkat Rao</h3>
+            <p>
+</p>
+        </div>
+    </div>
+    <h1>Campus placement Stastics</h1>
+<!-- galllery slider     -->
+    
+
+    <div class="gallery"> 
+        <div class="image">
+          <img src="images/place1.png" alt="Image 1" onclick="openModal('images/place1.png', 'Web Design')">
+        </div>
+        <div class="image">
+          <img src="images/place2.png" alt="Image 2" onclick="openModal('images/place2.png', 'Graphics Design')">
+        </div>
+        <div class="image">
+          <img src="images/place3.png" alt="Image 3" onclick="openModal('images/place2.png', 'UI UX Design')">
+        </div>
+        <div class="image">
+          <img src="images/place4.png" alt="Image 4" onclick="openModal('images/place4.png', 'Photography')">
+        </div>
+        <div class="image">
+          <img src="images/place1.png" alt="Image 5" onclick="openModal('images/place1.png', 'Web Development')">
+        </div>
+        <div class="image">
+          <img src="images/place4.png" alt="Image 6" onclick="openModal('images/place4.png', 'Digital Marketing')">
+        </div>
+      </div>
+      
+      <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img id="modal-image" src="" alt="Modal Image">
+        <div id="caption" class="caption"></div>
+      </div>
+
+
+      <script>
+        function openModal(imageSrc, imageAlt) {
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-image');
+        const captionText = document.getElementById('caption');
+
+        modal.style.display = 'block';
+        modalImg.src = imageSrc;
+        modalImg.alt = imageAlt;
+        captionText.innerHTML = imageAlt;
+        }
+
+        function closeModal() {
+        const modal = document.getElementById('modal');
+        modal.style.display = 'none';
+        }
+
+      </script>
+
+
+
+    </div>
+
+    <script>
+      let prevScrollpos = window.pageYOffset;
+const navbar = document.getElementById("navbar");  
+
+window.onscroll = function() {
+  const currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    navbar.style.top = "0";
+  } else {
+    navbar.style.top = `-${navbar.offsetHeight}px`;
+  }
+  prevScrollpos = currentScrollPos;
+};
+ </script>
+ </div>
+</body>
+</html>

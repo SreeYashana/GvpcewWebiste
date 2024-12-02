@@ -1,0 +1,310 @@
+/* Importing Google Font - Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("images/bg.jpg") #030728 no-repeat center;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 70px 55px;
+}
+
+.card-list .card-item {
+  height: auto;
+  color: #fff;
+  user-select: none;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card-list .card-item .user-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 40px;
+  border: 3px solid #fff;
+  padding: 4px;
+}
+
+.card-list .card-item .user-profession {
+  font-size: 1.15rem;
+  color: #e3e3e3;
+  font-weight: 500;
+  margin: 14px 0 40px;
+}
+
+.card-list .card-item .message-button {
+  font-size: 1.25rem;
+  padding: 10px 35px;
+  color: #030728;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+.card-list .card-item .message-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.slider-wrapper .swiper-pagination-bullet {
+  background: #fff;
+  height: 13px;
+  width: 13px;
+  opacity: 0.5;
+}
+
+.slider-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.slider-wrapper .swiper-slide-button {
+  color: #fff;
+  margin-top: -55px;
+  transition: 0.2s ease;
+}
+
+.slider-wrapper .swiper-slide-button:hover {
+  color: #4658ff;
+}
+
+@media (max-width: 768px) {
+  .slider-wrapper {
+    margin: 0 10px 40px;
+  }
+
+  .slider-wrapper .swiper-slide-button {
+    display: none;
+  }
+}
+
+
+
+
+/* Style for the card wrapper (ensures flip works) */
+.card {
+    perspective: 1000px; /* Keep perspective for 3D effect */
+    width: 100%; /* Make the card take full width of the slide */
+    height: 100%; /* Make the card take full height of the slide */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.6s;
+  }
+  
+  .card-front {
+    background-color: #fff;
+  }
+  
+  .card-back {
+    background-color: #f2f2f2;
+    transform: rotateY(180deg); /* Hide the back face initially */
+  }
+  
+  .card.flip .card-front {
+    transform: rotateY(180deg); /* Flip the front face when clicked */
+  }
+  
+  .card.flip .card-back {
+    transform: rotateY(0deg); /* Show the back face when flipped */
+  }
+  
+
+
+
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.6s;
+}
+
+.card-front {
+  background-color: rgba(255, 255, 255, 0.036);
+  color: white;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.card-back {
+  background-color: rgba(255, 255, 255, 0.023);
+  color: white;
+  transform: rotateY(180deg);
+  flex-direction: column;
+  padding: 20px;
+}
+
+.card .message-button, .card .back-arrow-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.card .message-button:hover, .card .back-arrow-btn:hover {
+  background-color: #ddd;
+}
+
+/* Flip effect */
+.card.flip .card-front {
+  transform: rotateY(180deg);
+}
+
+.card.flip .card-back {
+  transform: rotateY(0deg);
+}
+
+
+.card-back .message-text {
+    max-height: 120px; /* Set a max height for the initial text */
+    overflow: hidden; /* Hide the overflowed content */
+    position: relative;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .card-back .read-more-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .card-back .read-more-btn:hover {
+    background-color: #ddd;
+  }
+  
+  .card-back .message-text.expanded {
+    max-height: none; /* Remove the max-height when expanded */
+  }
+  .card {
+    width: 300px; /* Set a fixed width for consistency */
+    height: 400px; /* Set a fixed height to ensure the cards are large enough */
+    position: relative; /* Position relative to contain absolute child elements */
+    perspective: 1000px; /* Add perspective for 3D effect on flip */
+  }
+  
+  .card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Keep front and back positioned absolutely */
+    top: 0;
+    left: 0;
+    backface-visibility: hidden; /* Prevent front and back from showing when flipped */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.6s; /* Smooth transition for the flip effect */
+  }
+  
+  .card-front {
+    background-color: rgba(255, 255, 255, 0.036);
+    color: white;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .card-back {
+    background-color: rgba(255, 255, 255, 0.023);
+    color: white;
+    transform: rotateY(180deg); /* Initial rotation for back */
+    flex-direction: column;
+  }
+  
+  .card.flip .card-front {
+    transform: rotateY(180deg); /* Flip front */
+  }
+  
+  .card.flip .card-back {
+    transform: rotateY(0deg); /* Flip back */
+  }
+  
+
+
+
+
+
+
+
+
+  .card-back {
+    background-color: rgba(255, 255, 255, 0.023);
+    color: white;
+    transform: rotateY(180deg);
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto; /* Enables vertical scrolling */
+    max-height: 100%; /* Make sure the content doesn't overflow out of the card */
+    height: 100%; /* Take up the full height of the card */
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .card-back .message-text {
+    max-height: 500px; /* Set a fixed height for the message text */
+    overflow-y: auto; /* Enables scrolling for message text */
+    padding-right: 10px; /* Prevent text from being cut off */
+  }
+  
+  /* Optional: Customize the scroll bar */
+  .card-back::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .card-back::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 3px;
+  }
+  
+  .card-back::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }

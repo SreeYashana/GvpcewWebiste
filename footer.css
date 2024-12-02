@@ -1,0 +1,38 @@
+.footer {
+    margin-top: 20px; /* Adjust margin as needed */
+ }
+ 
+ .contact-info {
+    color: #fff; /* Text color for contact info */
+    margin-bottom: 15px; /* Space below contact info */
+ }
+ 
+ .contact-info p {
+    margin: 5px 0; /* Space between contact info paragraphs */
+ }
+ 
+ .contact-info i {
+    margin-right: 8px; /* Space between icons and text */
+    color: #ff8c00; /* Set icon color to orange */
+ }
+ 
+ .text-warning {
+    background-color: #ff8c00; /* Background for Quick Links headings */
+ }
+ 
+ .text-white {
+    color: white; /* Text color for links and headings */
+ }
+ 
+ /* a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+ 
+ .footer p {
+    margin-bottom: 10px; /* Space between paragraphs */
+ }
+ 
+ /* Additional styles for Quick Links icons */
+ .footer .fa-link {
+    color: #ff8c00; /* Set icon color to orange for links */
+ }
+ 

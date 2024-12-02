@@ -1,0 +1,342 @@
+/* General Styles */
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin-left: 20px;
+    margin-right:20px;
+    padding: 0px;
+    background-color: #f4f4f4;
+    border-style: solid;
+    border-color: navy;
+
+  }
+  
+  
+  
+  /* Event Cards Section */
+  .events-container {
+
+    padding: 10px;
+    margin-bottom:30px ;
+    margin-left:60px;
+    margin-right: 20px;
+  }
+  
+  .event-row {
+    display: flex;
+    justify-content:space-between ;
+    margin-bottom: 20px;
+    gap:10px;
+    
+  }
+  
+ 
+ 
+/* Event Cards Section */
+.event-card { 
+    width: 23%;                    /* Maintain card width */
+    height: 350px;                 /* Fix the height of the card */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Ensures the content is spaced inside */
+    overflow: hidden;   
+    margin-right: 50px;            /* Prevents overflow of image or content */
+  }
+  
+  .event-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image Styling */
+  .event-card img {
+    width: 500px;                   /* Image will take up 100% of the width of the card */
+    height: 500px;                 /* Fixed height for image */
+    object-fit: cover;             /* Ensures image covers the area without distortion */
+    border-radius: 10px;           /* Rounded corners for the image */
+    margin-bottom: 10px;           /* Space between image and text */
+  }
+  
+  /* Event Card Text */
+  .event-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  /* View More Button */
+  .view-more-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-more-btn:hover {
+    background-color: #2980b9;
+  }
+  
+
+
+
+  /* Event Detail Section */
+  .event-detail {
+    margin-top: 100px;
+    padding: 20px;
+    
+  
+  }
+  
+  .event-detail h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .event-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .event-images img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Smooth Scroll for View More Buttons */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+
+
+
+/* Event Cards Section */
+.event-card {
+  width: 300px;                    /* Set a fixed width */
+  height: 300px;                   /* Set the same height as the width to make it square */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  padding: 50px;                      /* No extra padding, as we're making it square */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;         /* Center content (image, text, button) inside */
+  overflow: hidden;                /* Ensure no overflow */
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+/* Image Styling */
+.event-card img {
+  width: 100%;                     /* Image takes full width of the card */
+  height: 100%;                    /* Image takes full height of the card */
+  object-fit: cover;               /* Ensure the image fills the card without distortion */
+  border-radius: 10px;             /* Rounded corners for the image */
+}
+
+/* Event Card Text */
+.event-card h3 {
+  font-size: 1.2em;                  /* Adjust font size for better text fitting */
+  margin: 10px 0;                  /* Margin for spacing between image and text */
+  color:white;
+}
+
+/* View More Button */
+.view-more-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;                /* Add some space between text and button */
+}
+
+.view-more-btn:hover {
+  background-color: #2980b9;
+}
+
+
+.heading  h1{
+  
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #00ffff, #ff00c3);
+    -webkit-background-clip: text;  /* For WebKit browsers */
+    background-clip: text;         /* Standard for other browsers */
+    color: transparent;            /* Makes the text transparent so the gradient shows */
+    font-size: 3rem;               /* Example font size, adjust as needed */
+    font-weight: bold;             /* Example bold text */
+    margin-bottom:50px ;
+ 
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+/* Modal content */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 900px;
+  position:relative;
+}
+
+
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.event-card {
+  background-size: cover; /* Ensures the background image covers the entire card */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 300px; /* Adjust height as per your design */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Ensures the content stays at the bottom of the card */
+  color: white; /* Text color to ensure visibility on background */
+  padding: 20px; /* Adds padding inside the card */
+  position: relative;
+}
+
+
+
+
+.a1,.a2,.a3,.a4,.a5{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+
+.event-images .facilitation {
+  display: block;  /* Ensure it takes full width */
+  margin-bottom: 20px;
+   /* Optional: Space between the h3 and the images */
+}
+
+
+
+
+
+/* Ensure h3 text is centered and spaced from images */
+h3 {
+  text-align: center; /* Center the text */
+  margin-top: 20px; /* Space above the title */
+  margin-bottom: 10px; /* Space between title and images */
+}
+
+/* Make sure each event block (facilitation, a1, a2, etc.) is stacked vertically */
+.event-images > div {
+  margin-bottom: 30px; /* Space between event sections */
+}
+
+/* Style the image containers to align images properly */
+.a1, .a2, .a3, .a4, .a5 {
+  display: flex; /* Align images in a row */
+  justify-content: space-around; /* Distribute space evenly between images */
+  flex-wrap: wrap; /* Allow images to wrap to the next line if necessary */
+  gap: 10px; /* Space between images */
+}
+
+.a1 img, .a2 img, .a3 img, .a4 img, .a5 img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+
+.footer {
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+.contact-info {
+  color: #fff; /* Text color for contact info */
+  margin-bottom: 15px; /* Space below contact info */
+}
+
+.contact-info p {
+  margin: 5px 0; /* Space between contact info paragraphs */
+}
+
+.contact-info i {
+  margin-right: 8px; /* Space between icons and text */
+  color: #ff8c00; /* Set icon color to orange */
+}
+
+.text-warning {
+  background-color: #ff8c00; /* Background for Quick Links headings */
+}
+
+.text-white {
+  color: white; /* Text color for links and headings */
+}
+
+/* a:hover {
+  text-decoration: underline; /* Underline on hover for links */
+
+.footer p {
+  margin-bottom: 10px; /* Space between paragraphs */
+}
+
+/* Additional styles for Quick Links icons */
+.footer .fa-link {
+  color: #ff8c00; /* Set icon color to orange for links */
+}
